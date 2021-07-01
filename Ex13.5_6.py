@@ -2,17 +2,18 @@
 # которая принимает в качестве аргумента строку text
 # и возвращает значение True если указанный текст является палиндромом и False в противном случае.
 def is_palindrome(text):
-    new = text.lower()
-    mylist = list()
-    for i in range(len(new)):
-        if new[i].isalpha():
-            mylist.append(new[i])
-    s = ''.join(mylist)
+    list_of_text = list()
+    lower_text = text.lower()
+    for i in range(len(lower_text)):
+        if lower_text[i].isalpha():
+            list_of_text.append(lower_text[i])
+    new_text = ''.join(list_of_text)
 
-    if s == s[::-1]:
+    if new_text == new_text[::-1]:
         return True
     else:
         return False
+
 
 # считываем данные
 txt = input()
